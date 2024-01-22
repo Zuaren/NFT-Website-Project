@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+html {
+    -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+}
+
+
+/*===== root section ===  */
+
+:root { 
+
+    --fs-1: 1.563rem;
+    --fs-2: 1.375rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1.125rem;
+    --fs-5: 1rem;
+    --fs-6: 0.938rem;
+    --fs-7: 0.875rem;
+    --fs-8: 0.813rem;
+    --fs-9: 0.75rem;
+    --fs-10: 0.688rem;
+    --fs-11: 0.625rem;
+
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+    --weight-600: 600;
+    --weight-700: 700;
+    --weight-800: 800;
+    --weight-900: 900;
+
+
+
+    --black-black-60: #898CA9;
+    --black-black-12: #1A1B23; 
+    --cyberpunk: linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%);
+    --primary-purple: #B982FF;
+    --gradient-mimo: #18C8FF;
+
+
+
+
+    --border-radius-1: 1rem; 
+    --border-radius-2: 2rem;
+    --border-radius-3: 3rem; 
+    --border-radius-4: 4rem;
+    }
+
+
+/*===== end root ===  */
+
+
+
+/*==== header style section ====*/
+
+.btn-login,
+.btn-signin{
+    font-size: var(--fs-5);
+}
+
+.btn-signin { 
+    background: var(--gradient-main, linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)); 
+}
+
+
+/*===== Hero first-section style ======== */
+.hero-section {
+    position: relative;
+}
+
+.description {
+
+    color: var(--black-black-60);
+
+}
+
+#text-gradient{ 
+    background: var(--cyberpunk);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-title {
+    font-weight: var(--weight-900);
+}
+   
+   
+.img-main {
+    padding-right: .7rem;
+   }
+   
+
+.btn-get-started { 
+    background: var(--gradient-main, linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%)); 
+    animation: gradient 5s ease infinite;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*==== IMAGE STYLE HERO MAIN ====*/
+
+.img-main {
+    position: relative;
+}
+
+.img-star-1 {
+    position: absolute;
+    left: -5rem;
+    
+}
+
+/* .first-img { 
+    position: relative;
+}
+
+.first-img-description { 
+    position: absolute;
+    top: 10rem;
+    font-size: 0.75rem;
+    padding-left: .5rem;
+    width: 100%;
+}
+
+.first-img-title{ 
+    font-weight: var(--weight-600);
+}
+
+.price{ 
+   font-weight: var(--weight-600); 
+   font-size: 0.875rem;
+}
+
+.tag-id{ 
+    font-size: 0.875rem;
+    font-weight: var(--weight-700);
+} */
+
+
+
+/*==== wallet style section  ====*/
+.trade-desk-description,
+.cashelite-description,
+.walletelite-description {
+    color: var(--black-black-60);
+    font-size: 16px;
+}
+
+
+.elite-btn,
+.trade-btn,
+.walletlite-btn{ 
+    color: var(--primary-purple);
+}
+
+
+
+.trade-desk,
+.elite-atms,
+.elite-wallet {
+    background-color: var(--black-black-12);
+    border-radius: var(--border-radius-2);
+    width: 23.75rem;
+    padding: 2rem, 1.5rem;
+}
+
+
+/*======= LOGIN MODAL STYLE  =========*/
+
+#logInModal {
+    z-index: 10000;
+}
+
+input#email,
+input#password{
+    color: black;
+    font-size: .9rem;
+}
+
+.btn-close-modal {
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+}
+
+
+/* platform text */
+
+.platform-text{ 
+    font-weight: var(--weight-900);
+}
+
+
+/*====== custom service ======= */
+.service-customer {
+    font-weight: var(--weight-900);
+    font-size: 3.15rem;
+}
+
+.etherium-logo { 
+    position: absolute;
+    bottom: -7rem;
+    left: 35rem;
+}
+
+.img-star {
+    position: absolute;
+    bottom: 4rem;
+    left: -3rem;
+}
+
+.image-star-2-3 {
+    position: absolute;
+    bottom: 3rem;
+    left: -5rem;
+    top: 25rem;
+}
+
+.buy-sell {
+    font-size: 3.15rem;
+    font-weight: var(--weight-900);
+}
+
+
+
+/*========== received transmission style =======*/
+
+.input-transmission {
+    background: transparent;
+    border: 1px solid var(--gradient-mimo);
+    border-radius: 0.625rem;
+}
+
+.received-transmissions {
+    font-size: 3.15rem;
+    font-weight: var(--weight-900);
+}
+
+
+.email-input-transmission {
+    background: transparent;
+}
+
+.email-input-transmission::placeholder {
+    font-size: 1rem;
+}
+
+
+.arrow-transmission {
+    color: #898CA9;
+}
+
+
+.unsubscribe-text {
+    color: var(--black-black-60);
+}
+
+
+span {
+    color: white;
+    margin-left: .2rem;
+}
+
+
+.email-input-transmission:ac {
+    border: 0px solid;
+}
