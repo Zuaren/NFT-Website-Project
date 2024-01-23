@@ -14,6 +14,3 @@
 // ul.append(li);
 
 //styling elements here 
-
-
-
