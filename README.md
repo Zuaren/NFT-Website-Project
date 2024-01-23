@@ -8,6 +8,8 @@ This repository contains the source code and assets for the NFT Website Project.
 
 ## The features of this website is I will update soon
 
+=============================================================
+
 
 ## This project is not finished yet, I am still working on it
 
