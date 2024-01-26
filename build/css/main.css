@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-html {
+*,
+ html {
     -ms-scroll-chaining: none;
       overscroll-behavior: contain;
+      scroll-behavior: smooth;
 }
 
 
@@ -54,6 +56,8 @@ html {
 
 
 /*==== header style section ====*/
+
+
 
 .btn-login,
 .btn-signin{
@@ -180,7 +184,7 @@ html {
 
 /*======= LOGIN MODAL STYLE  =========*/
 
-#logInModal {
+#openModal {
     z-index: 10000;
 }
 
@@ -277,4 +281,58 @@ span {
 
 .email-input-transmission:ac {
     border: 0px solid;
+}
+
+
+
+
+/* modal style section */
+
+
+
+
+/* animation style section */
+.hero-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.second-section [class*="trade-desk"],
+.second-section [class*="elite-atms"],
+.second-section [class*="elite-wallet"],
+.second-section .etherium-logo,
+.second-section .image-star-2-3,
+.second-section .img-star {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Add a class to trigger the animation */
+.second-section.reveal {
+    visibility: visible;
+}
+
+/* Animation for each element */
+.second-section.reveal [class*="trade-desk"],
+.second-section.reveal [class*="elite-atms"],
+.second-section.reveal [class*="elite-wallet"],
+.second-section.reveal .etherium-logo,
+.second-section.reveal .image-star-2-3,
+.second-section.reveal .img-star {
+    opacity: 1;
+    transform: translateY(0);
 }
