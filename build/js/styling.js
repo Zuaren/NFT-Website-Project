@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", handleScroll);
 
     handleScroll();
+
 });
 
 
@@ -44,3 +45,25 @@ let lastScrollTop = 0;
 
             lastScrollTop = scrollTop;
         });
+
+
+
+
+
+
+    //transmission email section 
+    function transmissionValidation() {
+        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        const emailInput = document.getElementById('transmission-input-email');
+    
+
+        if (emailRegex.test(emailInput.value)) {
+            alert('Successful Log In');
+        } else {
+            alert('Invalid Email');
+        }
+    }
+    document.getElementById('arrow-send').addEventListener('click', transmissionValidation);
+
+        
+

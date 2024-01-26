@@ -184,7 +184,8 @@
 
 /*======= LOGIN MODAL STYLE  =========*/
 
-#openModal {
+#openModal,
+#openSignInModal {
     z-index: 10000;
 }
 

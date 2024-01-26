@@ -14,9 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
         openModal.classList.add("hidden");
     });
 
+//hide and unhide password
 
 
-    
+
     function emailValidation() {
         const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         const emailInput = document.getElementById('email');
@@ -28,11 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
             alert('Invalid Email');
         }
     }
-
-  
     document.getElementById('btn-submit').addEventListener('click', emailValidation);
 
 
+
+
+    function logInLogic () { 
+
+        
+
+    }
 
 
 });

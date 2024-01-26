@@ -14,12 +14,14 @@
     
 </head>
 <body class="font-[Inter] bg-[#0B0B0F] text-white text-lg">
-    <main class="main-section h-[90vh]">
+    <main id="main-top" class="main-section h-[90vh]">
     <header class="fixed bg-[#0B0B0F] z-[100] top-0 w-full transition-transform duration-300 ease-in-out transform translate-y-0" id="scrollHeader">
         <nav class="mt-3 border-gray-200 px-4 lg:px-6 py-2.5 cursor-pointer" aria-controls="" id="nav-bar"><!-- start nav -->
             <div class="header flex flex-wrap items-center justify-between mx-auto max-w-screen-xl">
                 <div>
-                    <h1 class="font-medium" id="title">LOGO</h1>
+                    <a href="#main-top">
+                        <h1 class="font-medium" id="title">LOGO</h1>
+                    </a>
                 </div>
             <div class="justify-between items-center w-full lg:flex lg:w-auto hidden" id="mobile-menu-2">
                 <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -27,10 +29,10 @@
                         <a href="#buy/sell" class="hover:text-[#933FFE]">Buy/Sell</a>
                     </li>
                     <li class="">
-                        <a href="#" class="hover:text-[#933FFE]">Grow</a>
+                        <a href="#grow" class="hover:text-[#933FFE]">Grow</a>
                     </li>
                     <li class="">
-                        <a href="#" class="hover:text-[#933FFE]">Business</a>
+                        <a href="#business" class="hover:text-[#933FFE]">Business</a>
                     </li>
                     <li class="">
                         <a href="#support" class="hover:text-[#933FFE]">Support</a>
@@ -47,7 +49,7 @@
         </nav><!-- end nav -->
     </header>
 
-    <!-- modal -->
+    <!-- Login modal -->
     <div id="openModal" class="LogInModal hidden fixed top-0 left-0 w-full h-full flex justify-center items-center bg-opacity-50 bg-gray-800">
         <div class="container-logInModal bg-white p-8 rounded shadow-md w-96">
             <div class="title flex items-center justify-between">
@@ -63,8 +65,38 @@
                 <div class="mb-4">
                     <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
                     <div class="relative">
-                        <input type="password" id="password" name="password" class="w-full p-2 pr-10 border rounded">
-                        <button type="button" onclick="togglePassword()" class="absolute inset-y-0 right-0 px-3 py-2 bg-gray-300 hover:bg-gray-400 focus:outline-none focus:shadow-outline">
+                        <input class="text-black" type="password" id="password-input" name="password" class="w-full p-2 pr-10 border rounded">
+                        <button type="button"  class="absolute inset-y-0 right-0 px-3 py-2 bg-gray-300 hover:bg-gray-400 focus:outline-none focus:shadow-outline">
+                            <i id="togglePasswordIcon" class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <button id="btn-submit" type="button" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Login</button>
+            </div>
+        </div>
+    </div>
+    <!-- end of modal -->
+
+
+
+    <!-- SignIn modal -->
+    <div id="openSignInModal" class="LogInModal hidden fixed top-0 left-0 w-full h-full flex justify-center items-center bg-opacity-50 bg-gray-800">
+        <div class="container-logInModal bg-white p-8 rounded shadow-md w-96">
+            <div class="title flex items-center justify-between">
+                <h2 id="logInText" class="flex justify-center text-gray-600 text-2xl font-semibold mb-4">Login</h2>
+                <button id="btn-close" class="btn-close-modal mt-4 text-sm text-white hover:text-gray-800">Close</button>
+            </div>
+            <div class="login-section">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded">
+                </div>
+    
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                    <div class="relative">
+                        <input class="text-black" type="password" id="password-input" name="password" class="w-full p-2 pr-10 border rounded">
+                        <button type="button"  class="absolute inset-y-0 right-0 px-3 py-2 bg-gray-300 hover:bg-gray-400 focus:outline-none focus:shadow-outline">
                             <i id="togglePasswordIcon" class="fas fa-eye"></i>
                         </button>
                     </div>
@@ -84,8 +116,12 @@
                         <p class="description leading-[2rem] pt-[4rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium mattis in <br> ipsum pharetra ultricies pharetra vel tempor</p>
                     </div>
                     <div class="mt-10 flex gap-[2rem]">
-                        <button class="btn-get-started font-semibold text-4 h-[3.5rem] w-[10rem] text-indigo-100 transition-colors duration-150  rounded-lg focus:shadow-outline hover:bg-indigo-800">Get Started</button>
-                        <button class="font-semibold h-[3.5rem] w-[10rem] border rounded-lg" id="text-gradient">Learn More</button>
+                        <a href="https://opensea.io/collection/monkeybet" target="_blank">
+                            <button class="btn-get-started font-semibold text-4 h-[3.5rem] w-[10rem] text-indigo-100 transition-colors duration-150  rounded-lg focus:shadow-outline hover:bg-indigo-800">Get Started</button>
+                        </a>
+                        <a href="https://www.investopedia.com/non-fungible-tokens-nft-5115211" target="_blank">
+                            <button class="font-semibold h-[3.5rem] w-[10rem] border rounded-lg" id="text-gradient">Learn More</button>
+                        </a>
                     </div>
             </div>
 
@@ -112,7 +148,7 @@
     </div> <!-- end of  first hero main -->
 
 
-    <div class="second-section pt-[] relative h-[38rem]">
+    <div class="second-section pt-[] relative h-[38rem]" id="business">
         <div class="flex flex-wrap justify-center gap-[2rem] items-center mx-auto max-w-screen-xl pt-[5rem] relative h-[100%]">
 
             <div class="trade-desk w-[23.75rem] h-[15rem] grid place-items-center">
@@ -130,7 +166,7 @@
                 </div>
                 <h3 class="flex justify-center text-[2rem] font-bold">Elite ATMs</h3>
                 <p class="cashelite-description flex justify-center text-center text-[1rem]">We have thousands of ATMs located <br>across the U.S. where you can easily <br>convert cash to crypto</p>
-                <a class="flex justify-center" href=""><button class="elite-btn flex">Find an ATM <img src="image/arrow.svg" alt="arrow"></button></a>
+                <a class="flex justify-center" href="https://accounts.binance.com/en/register?ref=818734915&gclid=CjwKCAiAzc2tBhA6EiwArv-i6dOfN6Dm1UzYJSZY_A7RJ7KjglNtEKOWQLsq6JEh_6bsVIsCwgbEdRoCDCwQAvD_BwE" target="_blank"><button class="elite-btn flex">Find an ATM <img src="image/arrow.svg" alt="arrow"></button></a>
             </div>
 
             <div class="elite-wallet w-[23.75rem] h-[15rem] grid place-items-center">
@@ -162,7 +198,9 @@
                 <p>We invest more resources than any other platform in making sure great <br> support from real people is a click away, whenever you need it.</p>
             </div>
             <div class="pt-10">
-                <button class="btn-get-started font-semibold text-4 h-[3.5rem] w-[10rem] text-indigo-100 transition-colors duration-150  rounded-lg focus:shadow-outline hover:bg-indigo-800">Get Started</button>
+                <a href="https://www.everand.com/book/554700189/NFT-Gaming-The-Play-to-Earn-Model" target="_blank">
+                    <button class="btn-get-started font-semibold text-4 h-[3.5rem] w-[10rem] text-indigo-100 transition-colors duration-150  rounded-lg focus:shadow-outline hover:bg-indigo-800">Get Started</button>
+                </a>
             </div>
         </div>
     </div>
@@ -175,7 +213,9 @@
             <h3 class="service-customer">24/7 access to full <br> service customer <br> support</h3>
             <p>We invest more resources than any other platform in making sure great <br> support from real people is a click away, whenever you need it.</p>
             <div class="pt-10">
-                <button class="font-semibold h-[3.5rem] w-[10rem] border rounded-lg" id="text-gradient">Get Started</button>
+                <a href="https://discord.gg/crypto-pinas-911152008495497256" target="_blank">
+                    <button class="font-semibold h-[3.5rem] w-[10rem] border rounded-lg" id="text-gradient">Get Started</button>
+                </a>
             </div>
         </div>
     </div>
@@ -214,7 +254,7 @@
                     </div>
             </div>
 
-            <div> <!-- right hero main -->
+            <div class="pt-10">  <!-- right hero main -->
                 <div class="img-main grid grid-cols-4 md:grid-cols-3 gap-10 items-center">
                     <div class="first-img">
                         <img src="image/Group 251st-img(1).png" alt="">
@@ -230,16 +270,16 @@
         </div>
     </div> <!-- end of  first hero main -->
 
-    <div class="flex justify-center lg:px-6 leading-tight pt-[10rem]">
+    <div class="flex justify-center lg:px-6 leading-tight pt-[10rem]" id="grow">
         <div class="flex flex-col justify-center items-center mx-auto max-w-screen-xl pt-[5rem]">
             <div>
                 <h3 class="received-transmissions flex justify-center">Receive transmissions</h3>
-                <p class="unsubscribe-text flex justify-center pt-10">Unsubscribe at any time. <span> Privacy policy↗</span></p>
+                <p class="unsubscribe-text flex justify-center pt-10">Unsubscribe at any time. <a href="https://github.com/Zuaren" target="_blank"><span> Privacy policy↗</span></a></p>
             </div>
             <div class="input-transmission flex justify-center items-center h-[4rem] w-[21rem] mt-10">
               <div class="flex gap-10">
-                <input id="" type="text" placeholder="Email Address" class="email-input-transmission">
-                <img id="" class="arrow-transmission" src="image/arrow.svg" alt="">
+                <input id="transmission-input-email" type="text" placeholder="Email Address" class="email-input-transmission">
+                <img id="arrow-send" class="arrow-transmission" src="image/arrow.svg" alt="">
               </div>
             </div>
         </div>
@@ -249,19 +289,19 @@
     <div class="footer flex flex-wrap justify-between items-center mx-auto max-w-screen-xl pt-[5rem]">
         <div>
             <h3>LOGO</h3>
-            <p class="mt-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Lorem elit ipsum neque, donec justo viverra viverra ac. <br> Nulla non massa, sed nibh proin dui nec, erat est. <br> Placerat feugiat integer amet gravida. Quis diam <br> suspendisse nulla dignissim malesuada eget purus turpis.  </p>
+            <p class="mt-10 opacity-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Lorem elit ipsum neque, donec justo viverra viverra ac. <br> Nulla non massa, sed nibh proin dui nec, erat est. <br> Placerat feugiat integer amet gravida. Quis diam <br> suspendisse nulla dignissim malesuada eget purus turpis.  </p>
             <div class="input-transmission flex justify-center items-center h-[4rem] w-[21rem] mt-10">
                 <div class="flex gap-10">
                   <input type="text" placeholder="Email Address" class="email-input-transmission">
                   <img class="arrow-transmission" src="image/arrow.svg" alt="">
                 </div>
               </div>
-            <div class="credits">
-                <p>@ 2024 Cortezano</p>
+            <div class="credits pt-5">
+                <p class="opacity-50">@ 2024 Cortezano</p>
             </div>
         </div>
         <div>
-            <ul>
+            <ul class="opacity-50">
                 <li>Company</li>
                 <li>About</li>
                 <li>Careers</li>
@@ -271,7 +311,7 @@
             </ul>
         </div>
         <div>
-            <ul>
+            <ul class="opacity-50">
                 <li>Privacy Policy and Terms of Service</li>
                 <li>Elite Policy</li>
                 <li>Elite Biometrics Privacy Policy</li>
@@ -288,5 +328,6 @@
 <!-- js section -->
     <script src="./js/styling.js"></script>
     <script src="js/logIn.js"></script>
+    <script src="js/signIn.js"></script>
 </body>
 </html>
