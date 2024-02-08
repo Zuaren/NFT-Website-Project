@@ -66,4 +66,3 @@ let lastScrollTop = 0;
     document.getElementById('arrow-send').addEventListener('click', transmissionValidation);
 
         
-

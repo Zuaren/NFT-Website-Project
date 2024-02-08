@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
-*,
- html {
-    -ms-scroll-chaining: none;
-      overscroll-behavior: contain;
-      scroll-behavior: smooth;
-}
-
+html {
+    scroll-behavior: smooth;
+  }
 
 /*===== root section ===  */
 
@@ -243,54 +238,24 @@ input#password{
 
 /*========== received transmission style =======*/
 
-.input-transmission {
-    background: transparent;
-    border: 1px solid var(--gradient-mimo);
-    border-radius: 0.625rem;
+.logIn_Modal { 
+    backdrop-filter: blur(5px);
 }
 
-.received-transmissions {
-    font-size: 3.15rem;
-    font-weight: var(--weight-900);
+#emailInput::placeholder {
+    color: whitesmoke;
 }
 
-
-.email-input-transmission {
-    background: transparent;
+#passwordInput::placeholder {
+    color: whitesmoke;
 }
-
-.email-input-transmission::placeholder {
-    font-size: 1rem;
-}
-
-
-.arrow-transmission {
-    color: #898CA9;
-}
-
-
-.unsubscribe-text {
-    color: var(--black-black-60);
-}
-
-
-span {
-    color: white;
-    margin-left: .2rem;
-}
-
-
-.email-input-transmission:ac {
-    border: 0px solid;
-}
-
-
 
 
 /* modal style section */
 
-
-
+.logIn-container {
+   
+}
 
 /* animation style section */
 .hero-section {
@@ -336,4 +301,42 @@ span {
 .second-section.reveal .img-star {
     opacity: 1;
     transform: translateY(0);
+}
+
+
+
+/* animation wallet style  */
+
+
+/* .trade-desk { 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.trade-desk::after {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+} */
+
+.trade-desk,
+.elite-atms,
+.elite-wallet{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.trade-desk:hover,
+.elite-atms:hover,
+.elite-wallet:hover {
+    box-shadow: 0 5px 15px rgba(244, 72, 250, 0.822);
+    transition: opacity 0.3s ease-in-out;
+    transform: scale(1.2, 1.2);
+}
+
+.trade-desk:after,
+.elite-atms,
+.elite-wallet
+{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
 }
